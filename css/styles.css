@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+.main-header ,
+.main-nav  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-header {
+  margin-top: 10px;
+}
+.main-nav {
+  list-style-type: none;
+  justify-content: space-around;
+}
+.items {
+  background-color: lightgrey;
+  font-family: copperplate;
+  border: 2px solid #e2e2e2;
+}
+h1{
+  font-family: cursive;
+  padding-left: 35px;
+}
