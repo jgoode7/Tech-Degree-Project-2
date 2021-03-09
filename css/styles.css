@@ -1,7 +1,6 @@
 /*    Base Styles   */
 main {
-  background-color: #F5FFFA;
-  margin-top: -70px;
+  margin-top: 0;
 }
 body {
 
@@ -79,8 +78,7 @@ p {
   font-family: 'Ravi Prakash', cursive;
 }
 .flex-wrapper {
-  padding-left: 1em;
-  padding-right: 1em;
+
 }
 .main-header ,
 div ,
@@ -100,11 +98,36 @@ aside {
 }
 #skills {
   padding-bottom: 25px;
+  align-items: center;
+  width: 100%;
 }
 
 /* Media Queries */
 @media screen and (min-width: 769px) {
-  .flex-wrapper , div {
+  .main-header {
+    align-content: center;
+  }
+  .main-nav , ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-start;
+  }
+  li {
+    width: 150px;
+    overflow: auto;
+  }
+  .items {
+    border: inherit;
+    background-color: inherit;
+  }
+  .main-profile-pic {
+    float: right;
+  }
+  .intro {
+    margin: 10px 5px 15px 5px;
+  }
+  .flex-wrapper {
     width: 100%;
     max-width: 1020px;
     margin: 0 auto;
@@ -114,7 +137,8 @@ aside {
   }
   .flex-wrapper{
     display: flex;
-    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow: auto;
   }
 }
 @media screen and (min-width: 1024px) {
