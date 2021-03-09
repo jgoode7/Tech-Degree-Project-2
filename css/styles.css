@@ -1,11 +1,33 @@
-h1{
-  font-family: cursive;
+/*    Base Styles   */
+main {
+  background-color: #F5FFFA;
+  margin-top: -70px;
 }
-div {
+body {
+
+}
+div , section {
 	align-items: center;
-	margin-top: 40px;
+
+}
+h1{
+  font-family: 'Caveat', cursive;
+  font-size: 3em;
+}
+h2 {
+	margin: 70px 0 70px 0;
+	font-size: 2.5rem;
+  text-align: center;
+	font-family: copperplate;
+  color: #26004d;
+}
+h3 {
+	font-size: 2rem;
+	font-family: copperplate;
+	margin-top: 2em;
 }
 ul {
+  list-style-type: none;
 	padding-left: 0px;
   font-size: 1.25em;
 }
@@ -15,25 +37,18 @@ li {
 p {
 	padding-top: 15px;
   padding-bottom: 25px;
-	font-family: arial;
+	font-family: 'Ravi Prakash', cursive;
 	font-size: 1.2em;
 }
-h2 {
-	margin: 70px 0 70px 0;
-	font-size: 2rem;
-	font-family: copperplate;
-}
-h3 {
-	font-size: 2rem;
-	font-family: copperplate;
-	margin-top: 2em;
-}
+
+/*   Class Selectors   */
 .img {
-  width: 100%;
+  width: 95%;
   height: auto;
 }
 .main-profile-pic {
-	width: 350px;
+  max-width: 280px;
+  overflow: auto;
 }
 .main-nav {
   list-style-type: none;
@@ -47,25 +62,68 @@ h3 {
   border: 1px solid #e2e2e2;
   padding: 10px 0 10px 0;
 }
-.main-header ,
-div ,
-section ,
-aside {
-  display: flex;
-  flex-direction: column;
-	text-align: center;
-}
-.main-header ,
-footer{
-	background-color: #f2f2f2;
-}
 .container {
   display: inline-flex;
   margin-top: 5px;
+  vertical-align: bottom;
 }
 .item1 {
   margin-right: auto;
 }
 .item2 {
   list-style-type: none;
+}
+.skills-list {
+  padding-top: 20px;
+  list-style-type: none;
+  font-family: 'Ravi Prakash', cursive;
+}
+.flex-wrapper {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.main-header ,
+div ,
+section ,
+aside {
+  display: inline-block;
+	text-align: center
+}
+.main-header ,
+.main-footer {
+	background-color: #f2f2f2;
+  width: 100%;
+}
+/* ID Selectors */
+#contact {
+  margin-top: -30px;
+}
+#skills {
+  padding-bottom: 25px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 769px) {
+  .flex-wrapper , div {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  .img {
+    width: 80%
+  }
+  .flex-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .flex-wrapper , div {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .img {
+    width: 80%
+  }
 }
