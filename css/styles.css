@@ -1,14 +1,17 @@
 /*    Base Styles   */
-
+* {
+  box-sizing: border-box;
+}
+head {
+  margin: 0 -30px 0 0;
+}
 main {
   margin-top: 0;
-}
-div , section {
-	align-items: center;
 }
 h1{
   font-family: 'Caveat', cursive;
   font-size: 3em;
+  padding-left: 2.5px;
 }
 h2 {
 	margin: 70px 0 70px 0;
@@ -36,10 +39,16 @@ p {
 	font-family: 'Ravi Prakash', cursive;
 	font-size: 1.2em;
 }
+aside {
+  width: 100%;
+}
 
 /*   Class Selectors   */
-
 .img {
+  width: 95%;
+  height: auto;
+}
+.img-skills {
   width: 95%;
   height: auto;
 }
@@ -60,9 +69,10 @@ p {
   padding: 10px 0 10px 0;
 }
 .container {
-  display: inline-flex;
+  display: flex;
+  justify-content: flex-start;
   margin-top: 5px;
-  vertical-align: bottom;
+  margin-right: auto;
 }
 .item1 {
   margin-right: auto;
@@ -87,21 +97,39 @@ aside {
 	background-color: #f2f2f2;
   width: 100%;
 }
+.footer-nav {
+  display: none;
+}
+.footer-h3 {
+  display: none;
+}
 
 /* ID Selectors */
-
 #contact {
   margin-top: -30px;
+  text-align: center;
+  width: inherit;
 }
 #skills {
   padding-bottom: 25px;
   align-items: center;
   width: 100%;
+  text-align: center;
 }
 
 /* Media Queries */
 
 @media screen and (min-width: 769px) {
+
+  /*    Base Styles   */
+  li {
+    width: 200px;
+    height: auto;
+    overflow: auto;
+    color: purple;
+  }
+
+/*   Class Selectors   */
   .main-header {
     text-align: center;
   }
@@ -110,12 +138,6 @@ aside {
     flex-direction: row;
     justify-content: space-around;
     align-content: flex-start;
-  }
-  li {
-    width: 200px;
-    height: auto;
-    overflow: auto;
-    color: purple;
   }
   .items {
     border: inherit;
@@ -133,21 +155,24 @@ aside {
   .img-skills {
     width: 50%;
   }
-  .flex-wrapper , section {
+  .flex-wrapper {
     display: flex;
-    flex: 1 auto;
-    justify-content: space-around;
     overflow: auto;
     flex-wrap: wrap;
-    flex-basis: 50%;
-    width: 100%;
-    max-width: 1020px;
-    margin: 0 auto;
+  }
+  .container {
+  margin-right: auto;
+  width: inherit;
+  }
+  .flex-wrapper section {
+    flex-basis: 50%
   }
   .skills-list li {
     overflow: hidden;
     width: auto;
   }
+
+/* ID Selectors */
   #skills {
     margin-top: 2em;
     text-align: center;
@@ -156,18 +181,18 @@ aside {
   #contact li {
     width: 100%;
   }
-  .container {
-    margin-right: auto;
-    width: inherit;
+
+/* Hidden Footer Nav */
+  .footer-nav {
+    display: none;
   }
-  aside {
-    width: 100%
+  .footer-h3 {
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) {
-  aside {
-    width: 100%
-  }
+
+/*    Base Styles   */
   li {
     width: 120px;
     height: auto;
@@ -188,7 +213,6 @@ aside {
     justify-content: flex-end;
     overflow: auto;
     flex-wrap: wrap;
-    justify-content: flex-end;
     padding: 10px 15px;
    }
    .headerflex2 {
@@ -205,7 +229,6 @@ aside {
     border: inherit;
     background-color: inherit;
   }
-
   .main-profile-pic {
     float: right;
     width: 40%;
@@ -216,32 +239,44 @@ aside {
   }
   .img-skills {
     width: 40%;
-
   }
-  .flex-wrapper , section {
-    display: flex;
-    justify-content: space-around;
-    overflow: auto;
-    flex-wrap: wrap;
-    flex-basis: 32%;
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
+  .container {
+    display: none;
+  }
+  .flex-wrapper section {
+    flex-basis: 33%;
   }
   .skills-list li {
     overflow: hidden;
     width: auto;
   }
-  .container {
-    margin-right: auto;
-    width: inherit;
-  }
+
+/* ID Selectors */
   #skills {
     margin-top: 2em;
     text-align: center;
     color: #f00;
   }
+  #contact p {
+    padding: 10px 350px 0 350px;
+  }
+  #contact ul {
+    display: inline-block;
+  }
   #contact li {
     width: 100%;
+  }
+
+/* Hidden Footer Nav */
+  .footer-nav , .headerflex2 , .footer-h3 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+  }
+  .footer-h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    padding-left: 25px;
+    margin: 0 auto 0 10px;
   }
 }
