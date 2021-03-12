@@ -135,6 +135,7 @@ aside {
   }
   .flex-wrapper , section {
     display: flex;
+    flex: 1 auto;
     justify-content: space-around;
     overflow: auto;
     flex-wrap: wrap;
@@ -164,12 +165,83 @@ aside {
   }
 }
 @media screen and (min-width: 1024px) {
+  aside {
+    width: 100%
+  }
+  li {
+    width: 120px;
+    height: auto;
+    overflow: auto;
+    color: purple;
+  }
   .flex-wrapper , div {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
   }
   .img {
     width: 40%
+  }
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 10px 15px;
+   }
+   .headerflex2 {
+     order: 2;
+   }
+   .headerflex1 {
+    order: 1;
+    margin-right: auto;
+   }
+  .intro {
+    order: 3;
+  }
+  .items {
+    border: inherit;
+    background-color: inherit;
+  }
+
+  .main-profile-pic {
+    float: right;
+    width: 40%;
+    order: 4;
+  }
+  .img {
+    width: 70%;
+  }
+  .img-skills {
+    width: 40%;
+
+  }
+  .flex-wrapper , section {
+    display: flex;
+    justify-content: space-around;
+    overflow: auto;
+    flex-wrap: wrap;
+    flex-basis: 32%;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .skills-list li {
+    overflow: hidden;
+    width: auto;
+  }
+  .container {
+    margin-right: auto;
+    width: inherit;
+  }
+  #skills {
+    margin-top: 2em;
+    text-align: center;
+    color: #f00;
+  }
+  #contact li {
+    width: 100%;
   }
 }
