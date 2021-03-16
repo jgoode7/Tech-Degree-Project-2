@@ -121,11 +121,14 @@ aside {
 @media screen and (min-width: 768px) {
 
   /*    Base Styles   */
-  li {
+  .skills-list li , .main-nav li {
     width: 200px;
     height: auto;
     overflow: auto;
     color: purple;
+  }
+  aside {
+    display: none;
   }
 
 /*   Class Selectors   */
@@ -181,19 +184,24 @@ aside {
   #contact li {
     width: 100%;
   }
+  /* Hidden Footer Nav */
+    .footer-nav , .headerflex2 , .footer-h3 {
+      display: flex;
+      justify-content: center;
+      margin-top: -5px;
+    }
+    .footer-h3 {
+      font-family: 'Caveat', cursive;
+      font-size: 2em;
+      padding-left: 25px;
+      margin: 0 auto 0 10px;
+    }
 
-/* Hidden Footer Nav */
-  .footer-nav {
-    display: none;
-  }
-  .footer-h3 {
-    display: none;
-  }
 }
 @media screen and (min-width: 1024px) {
 
 /*    Base Styles   */
-  li {
+  .skills-list li , .main-nav li {
     width: 120px;
     height: auto;
     overflow: auto;
@@ -221,6 +229,7 @@ aside {
    .headerflex1 {
     order: 1;
     margin-right: auto;
+    margin-top:
    }
   .intro {
     order: 3;
@@ -270,8 +279,7 @@ aside {
 /* Hidden Footer Nav */
   .footer-nav , .headerflex2 , .footer-h3 {
     display: flex;
-    justify-content: flex-end;
-    margin-top: -10px;
+    margin-top: -5px;
   }
   .footer-h3 {
     font-family: 'Caveat', cursive;
